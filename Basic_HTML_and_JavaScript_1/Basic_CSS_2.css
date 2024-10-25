@@ -1,0 +1,10 @@
+h1 {
+   text-shadow: 5px 5px 10px #00FF00;
+}
+
+p {
+  color: purple;
+  background: green;
+  font-weight: bold;
+  text-align: center;
+}
