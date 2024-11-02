@@ -184,6 +184,15 @@ p{
     padding: 10px;
 }
 
+/*Styling for screens 1200px or smaller*/
+@media screen and (max-width:1200px){
+    .column{
+        width: 100%;
+        padding: 0px;
+        margin-left: -15px; /*Centers each column on screen*/
+    }
+}
+
 /*Specifically styles first 7 column img tag elements 
 contained in elements with the .column class*/
 .column img:nth-child(-n + 7){
@@ -196,5 +205,305 @@ contained in elements with the .column class*/
 .recipe-container{
     width: 500px;
     height: 350px;
-    margin: 100px auto 180px;
+    margin: 100px auto 180px; /*Shorthand value for top, 
+    right, left, bottom. auto here applies to left and right*/
+    perspective: 1000px; /*tells browser how much space 3D
+    space an element should take up on screen*/
+}
+/*Styling for mobile devices*/
+@media screen and (max-width 600px){
+    .column img:nth-child(-n + 7){
+        width: 350px;
+        height: 225px;
+    }
+    .recipe-container{
+        width: 350px;
+        Height: 225px;
+    }
+}
+
+/*creates tile effect behind images*/
+.recipe-card-background{
+    background-color: rgb(149, 238, 223)
+}
+
+/*alternates blue tile background on smaller screen sizes*/
+@media screen and (max-width: 1200px){
+    #pork{
+        background-color: rgb(255, 255, 255);
+    }
+    #biscuits{
+        background-color: rgb(149, 238, 223);
+    }
+}
+
+/*FEATURED RECIPE*/
+
+/*styles featured recipe h3 tag*/
+#featured-header{
+    font-family: 'Sacramento', cursive; /*imported from fonts.google.com*/
+    font-size: 60px;
+    color: rgb(0, 80, 67);
+}
+
+#featured-main-text{
+    text-align: justify;
+    padding-top: 20px;
+    margin-left: 40px;
+}
+
+/*sets mardin left to 0 because 
+it is not needed on a small screen and centers text*/
+@media screen and (max-width: 1200px){
+    #featured-main-text{
+        margin-left: 0;
+    }
+}
+
+/*specifically styles img tag nested within #featured div
+in the Featured Recipe section*/
+@media screen and (min-width: 1600px){
+    #featured img{
+        width: 700px;
+        height: auto; /*automatically calculates image height
+        based on width*/
+        margin-left: -20px;
+        margin-top: -20px; /*margin left and top will 
+        override margin styling from .recipe-container
+        class selector.*/
+    }
+}
+
+/*adjusts position of featured image to be centered in its
+div when the width in 1599px or less*/
+@media screen and (max-width: 1599px){
+    #featured img{
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #featured .recipe-card-background{
+        height: 300px;
+    }
+    #featured img{
+        margin-top: -65px;
+    }
+}
+#featured-button{
+    display: block; /*positions recipe button on its own 
+    line from other elements within div*/
+    margin: 60px auto 0px;
+    background-color: rgb(1, 128, 106);
+    border-radius: 35px;
+    border: none; /*removes default border set by browser
+    when border-radius is used*/
+    font-family: 'Josefin Slab', serif; /*font from fonts.google.com*/
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/*styles hover effect of recipe button
+in Feature Recipe section*/
+#featured-button:hover{
+    background-color: rgb(247, 177, 188);
+}
+
+/*IMAGE FLIP*/
+
+/*psotions flip effect, defines transition time,
+and defines 3d effect*/
+.flip{
+    position: relative;
+    width: 100%;
+    height: 100%; /* setting width and height values to 
+    100% allows the effect to take up 100% of
+    the space available*/
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    transform-style: preserve-3d; /*treats elements as 3D
+    objects instead of flat (2D) objects*/
+}
+
+.flip:hover{
+    transform: rotateY(-180deg); /*rotates element right to left*/
+}
+
+.flip-front, .flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /*this will hide element once
+    it flips and display text*/
+}
+
+.flip-back{
+    background-color: rgb(149, 238, 233);
+    border: 2px solid white;
+    transform: rotatey(180deg); /*adds 180 degrees back from
+    previously subtracted -180 degrees so the text can be
+    properly read*/
+}
+
+.text-container{
+    padding-top: 70px;
+}
+
+@media screen and(max-width: 600px){
+    .text-container{
+        padding-top: 0px;
+    }
+}
+/*RECIPE BUTTON*/
+
+input[type="button"]{
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Josefin Slab', serif; /*from fonts.google.com*/
+    font-weight: bold;
+    font-size: 22px;
+    padding: 11px 17px;
+    color: rgb(1, 128, 106);
+    cursor: pointer;
+}
+
+input[type="button"]:hover{
+    background-color: rgb(247, 177, 188);
+    color: white;
+}
+
+/*ABOUT SECTION*/
+#about-header{
+    font-family: 'Sacramento', cursive; /*imported fonts.google.com*/
+    font-size: 60px;
+    color: rgb(0, 80, 67);
+}
+#about-main-text{
+    text-align: justify; 
+    padding-top: 20px;
+    margin-left: 40px;
+}
+
+@media screen and (max-width: 1200px){
+    #about-main-text{
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    #about img{
+        width: 700px;
+        height: auto;
+        margin-left: -20px;
+        margin-top: -20px;
+    }
+}
+
+@media screen and (max-width: 1599px){
+    #about img{
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #about .recipe-card-background{
+        height: 300px;
+    }
+    #about img{
+        margin-top: -65px;
+    }
+}
+
+/*CONTACT FORM CSS*/
+
+/*sets up content within the DIV tag containing the 
+ID contact to be centered on the webpage*/
+#contact{
+    display: block;
+    margin-bottom: 70px;
+}
+
+form{
+    display: table; /*displays form in a table 
+    format as rows and columns*/
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto; /*browser will automatically 
+    calculate margins to center form on the screen*/
+}
+
+/*targets input tags nested within form tags*/
+form input{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: rgb(165, 165, 165);
+    border: 2px solid rgb(165, 165, 165);
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px 15px 10px 0px;
+    transform: 0.3s ease-out; /*transitions back to light grey 
+    when user clicks away from input field*/
+}
+
+form input:focus{
+    border: 2px solid rgb(1, 128, 106);
+    color: black;
+    outline: none; /*removes default border added when
+    focus pseudo class is triggered*/
+    transition: 0.3s ease-out;
+}
+
+label{
+    font-family: 'Josefin Slab', serif; /*from fonts.google.com*/
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+textarea{
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    resize: both; /*allows user to resize text area
+    in width and height*/
+    border: 3px solid rgb(165, 165, 165);
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(165, 165, 165);
+    font-size: 15px
+    transition: 0.3s ease-out; /*will transition back to 
+    light grey*/
+}
+
+textarea:focus{
+    color: black;
+    border: 3px solid rgb(1, 128, 106);
+    transition: 0.3s ease-out;
+    outline: none;
+}
+
+input[type="submit"]{
+    background-color: rgb(1, 128, 106);
+    border: none;
+    border-radius: 35px;
+    font-family: 'Josefin Slab', serif; /*from fonts.google.com*/
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    margin-top: 20px;
+    color: #fff;
+    cursor: pointer;
+    float: right; /*positions submit button to bottom
+    right of the form*/
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(247, 177, 188);
 }
