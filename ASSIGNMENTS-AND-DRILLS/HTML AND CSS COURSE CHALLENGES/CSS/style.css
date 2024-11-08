@@ -1,0 +1,235 @@
+html {
+    overflow-x: hidden; /*hides left to right scroll bar*/
+    scroll-behavior: smooth; /*smooth scrolling effect*/
+}
+
+/*NAVBAR*/
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: index 9999;
+}
+
+ul {
+    list-style-type: none; /*using list style because display; inline
+    creates a black dot on the menu items*/
+    background-color: green;
+    margin: -15px -15px 0px -15px;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    display: block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none; /*gets rid of underline on link elements*/
+    width: 100px;
+    padding: 40px;
+    text-align: center;
+}
+
+a:hover {
+    background-color: darkolivegreen;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease-in;
+    cursor: default;
+}
+
+/*HEADERS*/
+h1 {
+    color: black;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    text-shadow: 1px .5px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 60px;
+}
+
+/*BODY STYLING*/
+
+p-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    text-align: match-parent;
+    color: black;
+    white-space: normal;
+    padding: 1px;
+    margin: auto;
+}
+
+p:hover { 
+    background-color: yellow;
+    font-size: 18px;
+    color: black;
+    cursor: default;
+  }
+
+/*IMAGE WITH FILTER*/
+.column{
+    float: left;
+    width: 48%;
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+img {
+    filter: sepia(50%);
+    border-radius: 15px 50px;
+    border: 5px solid rgb(196, 178, 178);
+    float: left;
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/*IMAGE WITH TEXT*/
+.img-container {
+    display: block;
+    position: relative;
+    float: left;
+    width:  300px;
+    height: 300px;
+    margin: auto;
+  }
+  
+  /* Centered text */
+  .centered-text {
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: default;
+  }
+
+  /*IMAGE WITH OVERLAY*/
+  .image-container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  /*VIDEO STYLING*/
+  video {
+    display: block;
+    margin: auto;
+  }
+
+  .video-container{
+    display: block;
+    position: relative;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+    border-radius: 0px;
+    border: none;
+    font-size: 50px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: default;
+  }
+
+/*TABLE STYLING*/
+.table-container{
+    display: outside;
+    background-size: 100%;
+    padding-top: 60px;
+    padding-left: 30px;
+}
+
+.table{
+    margin: auto;
+    margin-bottom: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+}
+
+table, th, td {
+    border: 1px solid blue;
+    width: 33%;
+    cursor: default;
+}
+
+th, td {
+    padding: 10px;
+  }
+
+td {
+    text-align: center;
+}
+
+/*adds color to top row of table*/
+tr:nth-of-type(1){
+    background-color: aquamarine;
+}
+
+/*FOOTER STYLING*/
+footer {
+    background-color: green;
+    position: sticky;
+    padding: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: -15px;
+}
+
+.footer-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+}
