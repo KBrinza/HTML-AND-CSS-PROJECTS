@@ -1,0 +1,227 @@
+/*Font Funnel Display imported from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Funnel+Display:wght@300..800&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sacramento&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/***** BODY *****/
+body {
+    margin: 0%; /*displays site to the edge of browser screen*/
+ }
+
+/*headers*/
+h1 {
+    text-transform: uppercase; /*all caps*/
+    font-family: "Funnel Display", sans-serif; /*from fonts.google.com*/
+    text-align: center; /*centers h1 elements*/
+    margin-top: 3%; /*Adds margin above h1*/
+    color: white; 
+    text-shadow: 2px 2px #232323;
+    font-size: 50px;
+    cursor: default;
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+    text-shadow: .10px .10px #232323;
+    cursor: default;
+}
+/* Styling for portfolio title text */
+.white-text {
+    color: white;
+    text-shadow: 2px 2px #232323;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: default;
+}
+
+/*paragraphs*/
+p {
+    font-family: "Funnel Display", sans-serif; /*from fonts.google.com*/
+    text-align: justify; /* Justify text within paragraph elements */
+    font-size: 20px;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    cursor: default;
+}
+
+/*center text*/
+.center-text {
+    text-align: center;
+}
+
+/* Anchor elements */
+a {
+    color: blue; /*makes links blue*/
+}
+
+/*images*/
+/* Image elements */
+img {
+    filter: grayscale(100%); /*100% = no color*/
+    border-radius: 50px; /*givs pics rounded corners*/
+    max-width: 100%; /*so images stay within width of container*/
+    height: 340px;
+    display: block; /*makes sure images can be centered*/
+    margin-left: auto; /*centers images*/
+    margin-right: auto; /*centers images*/
+    box-shadow: .1px .1px #232323;
+}
+
+/*footer*/
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    background-color: black;
+    font-family: "Funnel Display", sans-serif; /*from fonts.google.com*/
+    font-size: 20px;
+    color: white;
+    text-align: center;
+  }
+/***** END BODY *****/
+
+
+/***** NAVBAR *****/
+/* Add a black background color to the top navigation */
+.topnav {
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+    overflow: hidden;
+    margin-right: -15px;
+    margin-top: -10px;
+    z-index: 1;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    font-family: "Funnel Display", sans-serif; /*from fonts.google.com*/
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Adds color to home link */
+  .topnav a.active {
+    background-color: #4e4d4d;
+    color: white;
+  }
+  .topnav a.active:hover{
+    background-color: #ddd;
+    color: black;
+  }
+  
+/***** END NAVBAR *****/
+
+/***** VIDEO *****/
+/* Formatting for background video */
+#Typing_Video {
+    position: fixed; /*fixes video to page*/
+    filter: grayscale(100%); /*100% = no color*/
+    right: 0; /*kills space between edge of the video and edge of page */
+    bottom: 0; /*kills space between video bottom and bottom of page */
+    min-width: 100%; /*displays vid across full width of the page */
+    z-index: -1;
+}
+/***** END VIDEO *****/
+
+/***** TABLE *****/
+* { /*asterisk applies this effect to all elements on page*/
+    box-sizing: border-box;
+} 
+.Column_1 {
+    float: left;
+    width: 50%; /*makes width hair under half page size*/
+    padding: 10px;
+    padding-top: 1.9%; /*space between top of column and headings*/
+    height: 400px;
+    background-color: #f2f2f2; /*background color for lass Column_1*/
+}
+
+.Column_2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    margin: 0;
+    height: 400px;
+    background-color: #c6c3c3; /*background color for lass Column_2*/
+}
+
+/*overrides height and padding so contact form more space*/
+.Column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+/* This inserts something after the content of selected elements (in this case the elements with class "Row") */
+.Row:after {
+	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+}
+/***** END TABLE *****/
+
+/***** CONTACT FORM *****/
+/*CONTACT FORM CSS*/
+form{
+    padding: 5px;
+    display: table;
+    margin: auto;
+}
+
+input{
+    border: 2px solid rgb(70, 70, 70);
+    border-radius: 2px;
+    padding: 1px;
+    margin: 5px 10px 5px 0px;
+    font-size: 20px;
+    color: rgb(165, 165, 165);
+}
+
+/*styles label tag on contact form*/
+label {
+    font-family: "Funnel Display", sans-serif; /*from fonts.google.com*/
+    font-size: 20px;
+    margin: 10px;
+}
+
+/*type selector for textarea element for users to write message*/
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(70, 70, 70);
+    border-radius: 4px;
+    background: #ffffff;
+    font-family: "Funnel Display", sans-serif; /*from fonts.google.com*/
+    color: rgb(165, 165, 165);
+    font-size: 15px;
+    resize: both;
+}
+
+input[type=submit]{
+    background-color: rgba(255, 255, 255, 0.572);
+    border-radius: 4px;
+    box-shadow: 1px black;
+    color: black;
+    cursor: pointer;
+    float: right;
+}
+/***** END CONTACT FORM *****/

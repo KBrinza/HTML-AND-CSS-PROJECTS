@@ -1,0 +1,34 @@
+@media screen and (min-width: 320px){
+    /*calc(minimum size + (max size - min size) * 
+    ((viewport width percentage - min viewport width) / 
+    (max viewport width - min viewport width)))*/
+    h1{
+        font-size: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+}
+@media screen and (max-width: 990px){
+    .navbar-collapse{
+        background-color: black;
+        margin-top: 15px; 
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .nav-link{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    html{
+        scroll-padding-top: 300px;
+    }
+
+    img{
+        margin-bottom: 30px;
+    }
+
+    .container{
+        padding: 50px;
+    }
+}
