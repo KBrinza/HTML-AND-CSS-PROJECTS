@@ -1,117 +1,198 @@
 <!DOCTYPE html>
 <html lang=“en”>
-<head> 
-<title>Cujo's Petcare Services</title>
-<meta charset="UTF-8">
-<meta name="description" content="Petcare services">
-<link rel="stylesheet" href="css/one_page_website.css">
+
+<head>
+    <title>Cujo's Petcare Services</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Petcare services">
+    <link rel="stylesheet" href="css/one_page_website.css">
+    <script src="JAVASCRIPT/one_page_website.js" defer></script>
 </head>
+
 <body>
-	<!--NAVBAR--> 
-        <nav class="nav-bar"> 
-            <ul>
-                <li><a href="#walk">Walking</a></li>
-                <li><a href="#groom">Grooming</a></li>
-                <li><a href="#sit">Pet Sitting</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            </nav>
-	<!--HEADER-->
-	<header>
-		<div>
-			<h1>Welcome to Cujo's Petcare!</h1>
-		</div>
-	</header>
+    <!--NAVBAR-->
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#walk">Walking</a></li>
+            <li><a href="#groom">Grooming</a></li>
+            <li><a href="#sit">Pet Sitting</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!--HEADER-->
+    <header>
+        <div>
+            <h1>Welcome to Cujo's Petcare!</h1>
+        </div>
+    </header>
     <!--ABOUT INFO WITH IMAGE-->
     <img src="IMAGES/dogwalk.jpeg" alt="Picture of dogs being walked">
-    <p>Here at Cujo's Petcare, we offer a number of care options 
+    <p>Here at Cujo's Petcare, we offer a number of care options<br>
         to help you keepyour pet happy and healthy!</p>
 
     <!--DOG WALKING PRICES TABLE-->
     <section>
-        <h3 id="dog">Dog Walking</h3>
-        <table style="width:50%">
-            <tr>
-                <th>Hours</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <th>30 min</th>
-                <th>$15</th>
-            <tr>
-                <th>1 Hour</th>
-                <th>$30</th>
-            </tr>
-            <tr>
-                <th>Halfday</th>
-                <th>$120</th>
-            </tr>
+        <div id="walk">
+            <h3>Dog Walking</h3>
+            <table style="width:50%">
+                <tr>
+                    <th>Hours</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <th>30 min</th>
+                    <th>$15</th>
+                <tr>
+                    <th>1 Hour</th>
+                    <th>$30</th>
+                </tr>
+                <tr>
+                    <th>Halfday</th>
+                    <th>$120</th>
+                </tr>
             </table>
+        </div>
     </section>
     <!--GROOMING PRICES TABLE-->
     <section>
-        <h3 id="groom">Pet Grooming</h3>
-        <table style="width:50%">
-            <tr>
-                <th>Animal</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>Dog sm</td>
-                <td>$40</td>
-            <tr>
-                <td>Dog md</td>
-                <td>$50</td>
-            </tr>
-            <tr>
-                <td>Dog lg</td>
-                <td>$75</td>
-            </tr>
-            <tr>
-                <td>Cat</td>
-                <td>$100</td>
-            </tr>
+        <div id="groom">
+            <img src="IMAGES/grooming.jpg" alt="Picture of dogs being groomed">
+            <h3>Pet Grooming</h3>
+            <table style="width:50%">
+                <tr>
+                    <th>Animal</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <th>Dog sm</th>
+                    <th>$40</th>
+                <tr>
+                    <th>Dog md</th>
+                    <th>$50</th>
+                </tr>
+                <tr>
+                    <th>Dog lg</th>
+                    <th>$75</th>
+                </tr>
+                <tr>
+                    <th>Cat</th>
+                    <th>$100</th>
+                </tr>
             </table>
+        </div>
     </section>
     <!--PET SITTING WITH VIDEO-->
     <section>
-        <h3 id="sit">Pet Sitting Services</h3>
-        <p>$100 per day, per animal. <br>
-            Check out our this video to see how your pet will spend its days while you're away:</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/caclAKUT_No?si=Q01FRZNg3UAk2Bm6"></iframe>
-    
+        <div id="sit">
+            <h3>Pet Sitting Services</h3>
+            <p>$100 per day, per animal. <br>
+                Check out our this video to see how <br> your pet will spend its days while you're away:</p>
+            <div class="iframe-container">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/caclAKUT_No?si=Q01FRZNg3UAk2Bm6"></iframe>
+            </div>
+        </div>
     </section>
-    <!--CONTACT FORM-->
-    <section>
-        <div>
-        <h3 id="contact">Contact us</h3>
-        <p>We want to hear from you!<br>
-           Fill out the form if you have questions or want to schedule an appointment:</p>
-        <div>
-            <form>
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name"><br>
-                <input type="tel" placeholder="Phone Number">
-                <input type="email" placeholder="Email"><br>
-                <textarea placeholder="Type message here"></textarea><br>
-                <input type="submit" value="Submit">
-            </form>
+
+    <!--LIGHTBOX-->
+
+    <!-- Images used in lightbox -->
+    <div class="row">
+        <div class="column">
+            <img src="IMAGES/dogwalk.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="IMAGES/grooming.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="IMAGES/plant2.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="IMAGES/plant3.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
         </div>
     </div>
+
+    <!-- Lightbox Modal -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="IMAGES/dogwalk.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="IMAGES/grooming.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="IMAGES/plant2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="IMAGES/plant3.png" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="column">
+                <img class="demo" src="IMAGES/dogwalk.jpeg" onclick="currentSlide(1)" alt="Picture of dogs being walked">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="IMAGES/grooming.jpg" onclick="currentSlide(2)" alt="Picture of dog being groomed">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="IMAGES/plant2.png" onclick="currentSlide(3)" alt="Picture of Sunflowers">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="IMAGES/plant3.png" onclick="currentSlide(4)" alt="Picture of Succulents">
+            </div>
+        </div>
+    </div>
+
+    <!--CONTACT FORM-->
+    <section>
+        <div id="contact">
+            <h3>Contact us</h3>
+            <p>We want to hear from you!<br>
+                Fill out the form if you have questions or <br>want to schedule an appointment:</p>
+            <div>
+                <form>
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name"><br>
+                    <input type="tel" placeholder="Phone Number">
+                    <input type="email" placeholder="Email"><br>
+                    <textarea placeholder="Type message here"></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
     </section>
+    <br>
+    <br>
+    <br>
+    <br>
     <!--FOOTER-->
-	<footer>
-        <table>
-			<tr>
-				<td>
-					<p>Cujo's Pet Services&copy;</p><br>
-				</td>
-                <td>
-                    <p>Portland, OR 97214</p>
-                    <p>503-867-5309</p>
-                </td>
-			</tr>
-		</table>
-	</footer>
+    <footer>
+        <p>Cujo's Pet Services&copy;<br>
+            Portland, OR 97214<br>
+            503-867-5309</p>
+    </footer>
 </body>
+
 </html>
