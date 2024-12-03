@@ -16,10 +16,6 @@
 </head>
 
 <body>
-    <!--Bootstrap JavaScript link-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
@@ -51,21 +47,29 @@
             </div>
         </div>
     </nav>
+
+    
     <!--LOGO-->
     <header class="row justify-content-center">
         <img src="IMAGES/logo.png" class="img-fluid col-lg-6" id="header" alt="Academy Cinemas logo">
     </header>
     <section>
         <div class="container" id="not-playing">
-            <h1>Now Playing</h1>
+            <h1>Now Playing </h1>
             <!--BEN HUR-->
             <div class="d-flex flex-row flex-wrap spacer" id="ben-hur">
                 <div class="col-lg-5 mx-auto">
-                    <img src="IMAGES/ben-hur.jpg" class="img-fluid" alt="Ben-Hur movie poster">
+                    <span class="d-inline-block" tabindex="0" 
+                    data-bs-toggle="popover" 
+                    data-bs-trigger="hover focus" 
+                    data-bs-img="IMAGES/four-and-half-stars.png"
+                    data-bs-title="Ben Hur Rating">
+                      <img src="IMAGES/ben-hur.jpg" class="img-fluid" alt="Ben-Hur movie poster">
+                    </span>
                 </div>
                 <div class="card col-lg-5 mx-auto">
                     <div class="card-body">
-                        <h3 class="card-title">Ben-Hur</h3>
+                        <h3 class="card-title">Ben-Hur <span class="badge bg-secondary">New!</span></h3>
                         <!--BEN-HUR MOVIE DESCRIPTION-->
                         <p class="lead">After a Jewish prince is betrayed and sent into slavery by a Roman friend in
                             1st-century Jerusalem, he regains his freedom and comes back for revenge.
@@ -129,18 +133,30 @@
                     </div>
                 </div>
                 <div class="col-lg-5 mx-auto">
-                    <img src="IMAGES/earth-stood-still.jpg" class="img-fluid"
+                    <span class="d-inline-block" tabindex="0" 
+                    data-bs-toggle="popover" 
+                    data-bs-trigger="hover focus" 
+                    data-bs-img="IMAGES/four-stars.png"
+                    data-bs-title="The Day The Earth Stood Still Rating">
+                     <img src="IMAGES/earth-stood-still.jpg" class="img-fluid"
                         alt="The Day the Earth Stood Still movie poster">
+                    </span>
                 </div>
             </div>
             <!--VERTIGO-->
             <div class="d-flex flex-row flex-wrap spacer" id="vertigo">
                 <div class="col-lg-5 mx-auto">
+                    <span class="d-inline-block" tabindex="0" 
+                    data-bs-toggle="popover" 
+                    data-bs-trigger="hover focus" 
+                    data-bs-img="IMAGES/four-and-half-stars.png"
+                    data-bs-title="Vertigo Rating">
                     <img src="IMAGES/vertigo.jpg" class="img-fluid" alt="Vertigo movie poster">
+                    </span>
                 </div>
                 <div class="card col-lg-5 mx-auto">
                     <div class="card-body">
-                        <h3 class="card-title">Vertigo</h3>
+                        <h3 class="card-title">Vertigo <span class="badge bg-secondary">Leaving Soon!</span></h3>
                         <!--VERTIGO MOVIE DESCRIPTION-->
                         <p class="lead">A former San Francisco police detective juggles wrestling with his personal
                             demons
@@ -184,7 +200,7 @@
                     <div class="card text-center">
                         <h5 class="card-title">Please select a movie</h5>
                         <div class="card-body">
-                            <select class="form-select" aria-label="Movie title selection">
+                            <select id="movieSelect" class="form-select" aria-label="Movie title selection">
                                 <option selected>Select movie</option>
                                 <option value="1">Ben-Hur</option>
                                 <option value="2">The Day the Earth Stood Still</option>
@@ -198,7 +214,7 @@
                     <div class="card text-center">
                         <h5 class="card-title">Please select a show time</h5>
                         <div class="card-body">
-                            <select class="form-select" aria-label="Show time selection">
+                            <select id="timeSelect" class="form-select" aria-label="Show time selection">
                                 <option selected>Select time</option>
                                 <option value="1">10:00 AM</option>
                                 <option value="2">11:30 AM</option>
@@ -223,11 +239,21 @@
             <!--BUY TICKETS BUTTON-->
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <button type="submit" class="btn yellow-btn">BUY TICKETS</button>
+                    <button type="submit" class="btn yellow-btn" onclick="buyTickets()">BUY TICKETS</button>
                 </div>
             </div>
         </div>
     </section>
+    <!--Bootstrap Toast-->
+    <div id="toastDisplay" class="custom-toast toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Ticket Information</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div id="toastBody" class="toast-body">
+          <!--selected options will be displayed here-->>
+        </div>
+      </div>
     <!--CONTACT FORM-->
     <section>
         <div class="container" id="contact">
@@ -267,5 +293,8 @@
         </footer>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="JAVASCRIPT/javascript.js"></script>
 </body>
 </html>
