@@ -36,6 +36,18 @@ body{
     height: 100px;
 }
 
+/*SHRINK ON SCROLL NAVBAR*/
+.navbar-shrink {
+    height: 80px;
+    transition: .5s ease;
+}
+
+/*Adds transition to movie dropdown menu on shrink and scroll*/
+.navbar-collapse{
+    transition: margin-top 0.5s ease;
+}
+
+
 /*Affects title in navbar Academy Cinemas*/
 .navbar-brand{
     color: var(--main-color-accent);
